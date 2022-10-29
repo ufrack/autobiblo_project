@@ -1,0 +1,2620 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/mario/ontologies/2022/9/library_autobiblo"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/mario/ontologies/2022/9/library_autobiblo">
+    <Prefix name="" IRI="http://www.semanticweb.org/mario/ontologies/2022/9/library_autobiblo"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>This is an ontology for a school library system.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Author"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Book"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Genre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Publisher"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shelf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Student"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGenre"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPublished"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWritten"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAvailable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLocated"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isTaken"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isWritten"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#date_Book"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#first_name_author"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#first_name_student"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_Author"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_Book"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_Genre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_Publisher"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_Room"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_Shelf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_Student"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#last_name_author"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#last_name_student"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Adelphi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Agata_Christie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Alessandro_Manzoni"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Animal_Farm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Antonio_Curione"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Archives"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Arnold_Lobel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Break_Room"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Computer_Science"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Crime"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dante_Alighieri"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#De_Agostini"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Drama"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Elsa_Morante"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Emily_Brontë"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fables"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fairy_Tale"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fairy_Tales_and_Folklore"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fiction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Finance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Folklore"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Franz_Kafka"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fëdor_Dostoevskij"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#George_Orwell"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Giovanni_Verga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Greek_mythology"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hamlet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Historical"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#History"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hoepli"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Horror"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Human_body_anatomy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Humor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#If_this_is_a_man"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Info_Room"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Internet_Room"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#It"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Italo_Svevo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#J.K.Rowling"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#J.R.R._Tolkien"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#John_Douglas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Jules_Verne"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Knowledge_Flow"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LaFeltrinelli"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#La_Nuova_Italia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Laboratory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Learning_Java"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lev_Tolstoj"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Library"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Luigi_Pirandello"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Marc_Loy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mario_Franco"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mario_Rossi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Math"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#McGraw-Hill"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Michelle_Sandoval"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mindhunter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mithology"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mondadori"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Narrative"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Narrative_Room"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Novecento"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Novel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pearson_Italia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Phonoteque"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Poem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Poetry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Primo_Levi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Principles_of_Mathematical_analysis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Roger_Mason"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Romance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rosanna_Acquafredda"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Scientific"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shelf_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shelf_10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shelf_11"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shelf_12"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shelf_13"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shelf_14"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shelf_15"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shelf_16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shelf_17"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shelf_18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shelf_19"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shelf_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shelf_20"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shelf_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shelf_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shelf_5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shelf_6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shelf_7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shelf_8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shelf_9"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Short_Story"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stephen_King"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Study_Room"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#The_Betrothed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#The_Castle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#The_Divine_Comedy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#The_Idiot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#The_Lord_of_the_RIngs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#The_Metamorphosis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#The_Name_of_the_Rose"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#The_Possessed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#The_Trial"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#The_Ultimate_Finance_book"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#This_book_is_funny"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Umberto_Eco"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Uranus_Sagona"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Walter_Rudin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#William_Gray"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#William_Shakespeare"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wuthering_Heights"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#1984"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Harry_Potter:_The_Goblet_of_Fire"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kid&apos;s_Library"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#One,_No_One_and_One_Hundred_Thousand"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/mario/ontologies/2022/9/untitled-ontology-2#Zeno&apos;s_Conscience"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Author"/>
+        <Class IRI="#Book"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Genre"/>
+        <Class IRI="#Book"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Publisher"/>
+        <Class IRI="#Book"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shelf"/>
+        <Class IRI="#Room"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#Adelphi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Agata_Christie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Alessandro_Manzoni"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#Animal_Farm"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Student"/>
+        <NamedIndividual IRI="#Antonio_Curione"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Room"/>
+        <NamedIndividual IRI="#Archives"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Arnold_Lobel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Room"/>
+        <NamedIndividual IRI="#Break_Room"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Computer_Science"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Crime"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Dante_Alighieri"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#De_Agostini"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Drama"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Elsa_Morante"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Emily_Brontë"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Fable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#Fables"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Fairy_Tale"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#Fairy_Tales_and_Folklore"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Fiction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Finance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Folklore"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Franz_Kafka"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Fëdor_Dostoevskij"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#George_Orwell"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Giovanni_Verga"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#Greek_mythology"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#Hamlet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Historical"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#History"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#Hoepli"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Horror"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#Human_body_anatomy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Humor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#If_this_is_a_man"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Room"/>
+        <NamedIndividual IRI="#Info_Room"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Room"/>
+        <NamedIndividual IRI="#Internet_Room"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#It"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Italo_Svevo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#J.K.Rowling"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#J.R.R._Tolkien"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#John_Douglas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Jules_Verne"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Knowledge_Flow"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#LaFeltrinelli"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#La_Nuova_Italia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Room"/>
+        <NamedIndividual IRI="#Laboratory"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#Learning_Java"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Lev_Tolstoj"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Room"/>
+        <NamedIndividual IRI="#Library"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Luigi_Pirandello"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Marc_Loy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Student"/>
+        <NamedIndividual IRI="#Mario_Franco"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Student"/>
+        <NamedIndividual IRI="#Mario_Rossi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Math"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#McGraw-Hill"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Michelle_Sandoval"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#Mindhunter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Mithology"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#Mondadori"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Narrative"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Room"/>
+        <NamedIndividual IRI="#Narrative_Room"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#Novecento"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Novel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#Pearson_Italia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Room"/>
+        <NamedIndividual IRI="#Phonoteque"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Poem"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Poetry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Primo_Levi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#Principles_of_Mathematical_analysis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Roger_Mason"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Romance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Student"/>
+        <NamedIndividual IRI="#Rosanna_Acquafredda"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Scientific"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#Shelf_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#Shelf_10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#Shelf_11"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#Shelf_12"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#Shelf_13"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#Shelf_14"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#Shelf_15"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#Shelf_16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#Shelf_17"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#Shelf_18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#Shelf_19"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#Shelf_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#Shelf_20"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#Shelf_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#Shelf_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#Shelf_5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#Shelf_6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#Shelf_7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#Shelf_8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shelf"/>
+        <NamedIndividual IRI="#Shelf_9"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Short_Story"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Stephen_King"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Room"/>
+        <NamedIndividual IRI="#Study_Room"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#The_Betrothed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#The_Castle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#The_Divine_Comedy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#The_Idiot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#The_Lord_of_the_RIngs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#The_Metamorphosis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#The_Name_of_the_Rose"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#The_Possessed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#The_Trial"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#The_Ultimate_Finance_book"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#This_book_is_funny"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Umberto_Eco"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Uranus_Sagona"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#Walter_Rudin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#William_Gray"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Author"/>
+        <NamedIndividual IRI="#William_Shakespeare"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#Wuthering_Heights"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#1984"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#Harry_Potter:_The_Goblet_of_Fire"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Room"/>
+        <NamedIndividual IRI="#Kid&apos;s_Library"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#One,_No_One_and_One_Hundred_Thousand"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/mario/ontologies/2022/9/untitled-ontology-2#Zeno&apos;s_Conscience"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPublished"/>
+        <NamedIndividual IRI="#Adelphi"/>
+        <NamedIndividual IRI="#One,_No_One_and_One_Hundred_Thousand"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasWritten"/>
+        <NamedIndividual IRI="#Alessandro_Manzoni"/>
+        <NamedIndividual IRI="#The_Betrothed"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#Animal_Farm"/>
+        <NamedIndividual IRI="#Novel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#Animal_Farm"/>
+        <NamedIndividual IRI="#Shelf_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#Animal_Farm"/>
+        <NamedIndividual IRI="#Study_Room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#Animal_Farm"/>
+        <NamedIndividual IRI="#George_Orwell"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasWritten"/>
+        <NamedIndividual IRI="#Arnold_Lobel"/>
+        <NamedIndividual IRI="#Fables"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasWritten"/>
+        <NamedIndividual IRI="#Emily_Brontë"/>
+        <NamedIndividual IRI="#Wuthering_Heights"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#Fables"/>
+        <NamedIndividual IRI="#Fable"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#Fables"/>
+        <NamedIndividual IRI="#Shelf_15"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#Fables"/>
+        <NamedIndividual IRI="#Library"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#Fables"/>
+        <NamedIndividual IRI="#Arnold_Lobel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#Fairy_Tales_and_Folklore"/>
+        <NamedIndividual IRI="#Folklore"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#Fairy_Tales_and_Folklore"/>
+        <NamedIndividual IRI="#Shelf_16"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#Fairy_Tales_and_Folklore"/>
+        <NamedIndividual IRI="#Narrative_Room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#Fairy_Tales_and_Folklore"/>
+        <NamedIndividual IRI="#William_Gray"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#Greek_mythology"/>
+        <NamedIndividual IRI="#Mithology"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#Greek_mythology"/>
+        <NamedIndividual IRI="#Shelf_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#Greek_mythology"/>
+        <NamedIndividual IRI="#Info_Room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#Greek_mythology"/>
+        <NamedIndividual IRI="#Uranus_Sagona"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#Hamlet"/>
+        <NamedIndividual IRI="#Drama"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#Hamlet"/>
+        <NamedIndividual IRI="#Shelf_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#Hamlet"/>
+        <NamedIndividual IRI="#Study_Room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTaken"/>
+        <NamedIndividual IRI="#Hamlet"/>
+        <NamedIndividual IRI="#Rosanna_Acquafredda"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#Hamlet"/>
+        <NamedIndividual IRI="#William_Shakespeare"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#History"/>
+        <NamedIndividual IRI="#Narrative"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#History"/>
+        <NamedIndividual IRI="#Shelf_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#History"/>
+        <NamedIndividual IRI="#Study_Room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#History"/>
+        <NamedIndividual IRI="#Elsa_Morante"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#Human_body_anatomy"/>
+        <NamedIndividual IRI="#Scientific"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#Human_body_anatomy"/>
+        <NamedIndividual IRI="#Shelf_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#Human_body_anatomy"/>
+        <NamedIndividual IRI="#Laboratory"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#Human_body_anatomy"/>
+        <NamedIndividual IRI="#Knowledge_Flow"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#If_this_is_a_man"/>
+        <NamedIndividual IRI="#Narrative"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#If_this_is_a_man"/>
+        <NamedIndividual IRI="#Shelf_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#If_this_is_a_man"/>
+        <NamedIndividual IRI="#Study_Room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#If_this_is_a_man"/>
+        <NamedIndividual IRI="#Primo_Levi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#It"/>
+        <NamedIndividual IRI="#Horror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#It"/>
+        <NamedIndividual IRI="#Shelf_14"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#It"/>
+        <NamedIndividual IRI="#Phonoteque"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#It"/>
+        <NamedIndividual IRI="#Stephen_King"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasWritten"/>
+        <NamedIndividual IRI="#John_Douglas"/>
+        <NamedIndividual IRI="#Mindhunter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasWritten"/>
+        <NamedIndividual IRI="#Knowledge_Flow"/>
+        <NamedIndividual IRI="#Human_body_anatomy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#Learning_Java"/>
+        <NamedIndividual IRI="#Computer_Science"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#Learning_Java"/>
+        <NamedIndividual IRI="#Shelf_10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#Learning_Java"/>
+        <NamedIndividual IRI="#Library"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#Learning_Java"/>
+        <NamedIndividual IRI="#Marc_Loy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasWritten"/>
+        <NamedIndividual IRI="#Marc_Loy"/>
+        <NamedIndividual IRI="#Learning_Java"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasWritten"/>
+        <NamedIndividual IRI="#Michelle_Sandoval"/>
+        <NamedIndividual IRI="#This_book_is_funny"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#Mindhunter"/>
+        <NamedIndividual IRI="#Crime"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#Mindhunter"/>
+        <NamedIndividual IRI="#Shelf_9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#Mindhunter"/>
+        <NamedIndividual IRI="#Kid&apos;s_Library"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#Mindhunter"/>
+        <NamedIndividual IRI="#John_Douglas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPublished"/>
+        <NamedIndividual IRI="#Mondadori"/>
+        <NamedIndividual IRI="#1984"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasWritten"/>
+        <NamedIndividual IRI="#Primo_Levi"/>
+        <NamedIndividual IRI="#If_this_is_a_man"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#Principles_of_Mathematical_analysis"/>
+        <NamedIndividual IRI="#Math"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#Principles_of_Mathematical_analysis"/>
+        <NamedIndividual IRI="#Shelf_8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#Principles_of_Mathematical_analysis"/>
+        <NamedIndividual IRI="#Narrative_Room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#Principles_of_Mathematical_analysis"/>
+        <NamedIndividual IRI="#Walter_Rudin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasWritten"/>
+        <NamedIndividual IRI="#Roger_Mason"/>
+        <NamedIndividual IRI="#The_Ultimate_Finance_book"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasWritten"/>
+        <NamedIndividual IRI="#Stephen_King"/>
+        <NamedIndividual IRI="#It"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#The_Betrothed"/>
+        <NamedIndividual IRI="#Fiction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#The_Betrothed"/>
+        <NamedIndividual IRI="#Shelf_6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#The_Betrothed"/>
+        <NamedIndividual IRI="#Internet_Room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTaken"/>
+        <NamedIndividual IRI="#The_Betrothed"/>
+        <NamedIndividual IRI="#Antonio_Curione"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#The_Betrothed"/>
+        <NamedIndividual IRI="#Alessandro_Manzoni"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#The_Castle"/>
+        <NamedIndividual IRI="#Romance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#The_Castle"/>
+        <NamedIndividual IRI="#Shelf_11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#The_Castle"/>
+        <NamedIndividual IRI="#Library"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#The_Castle"/>
+        <NamedIndividual IRI="#Franz_Kafka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#The_Divine_Comedy"/>
+        <NamedIndividual IRI="#Poem"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#The_Divine_Comedy"/>
+        <NamedIndividual IRI="#Shelf_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#The_Divine_Comedy"/>
+        <NamedIndividual IRI="#Study_Room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#The_Divine_Comedy"/>
+        <NamedIndividual IRI="#Dante_Alighieri"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#The_Idiot"/>
+        <NamedIndividual IRI="#Romance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#The_Idiot"/>
+        <NamedIndividual IRI="#Shelf_11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#The_Idiot"/>
+        <NamedIndividual IRI="#Library"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#The_Idiot"/>
+        <NamedIndividual IRI="#Fëdor_Dostoevskij"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#The_Lord_of_the_RIngs"/>
+        <NamedIndividual IRI="#Narrative"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#The_Lord_of_the_RIngs"/>
+        <NamedIndividual IRI="#Shelf_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#The_Lord_of_the_RIngs"/>
+        <NamedIndividual IRI="#Study_Room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#The_Lord_of_the_RIngs"/>
+        <NamedIndividual IRI="#J.R.R._Tolkien"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#The_Metamorphosis"/>
+        <NamedIndividual IRI="#Novel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#The_Metamorphosis"/>
+        <NamedIndividual IRI="#Shelf_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#The_Metamorphosis"/>
+        <NamedIndividual IRI="#Study_Room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#The_Metamorphosis"/>
+        <NamedIndividual IRI="#Franz_Kafka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#The_Name_of_the_Rose"/>
+        <NamedIndividual IRI="#Romance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#The_Name_of_the_Rose"/>
+        <NamedIndividual IRI="#Shelf_11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#The_Name_of_the_Rose"/>
+        <NamedIndividual IRI="#Library"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#The_Name_of_the_Rose"/>
+        <NamedIndividual IRI="#Umberto_Eco"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#The_Possessed"/>
+        <NamedIndividual IRI="#Romance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#The_Possessed"/>
+        <NamedIndividual IRI="#Shelf_11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#The_Possessed"/>
+        <NamedIndividual IRI="#Library"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#The_Possessed"/>
+        <NamedIndividual IRI="#Fëdor_Dostoevskij"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#The_Trial"/>
+        <NamedIndividual IRI="#Novel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#The_Trial"/>
+        <NamedIndividual IRI="#Shelf_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#The_Trial"/>
+        <NamedIndividual IRI="#Library"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#The_Trial"/>
+        <NamedIndividual IRI="#Franz_Kafka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#The_Ultimate_Finance_book"/>
+        <NamedIndividual IRI="#Finance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#The_Ultimate_Finance_book"/>
+        <NamedIndividual IRI="#Shelf_12"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#The_Ultimate_Finance_book"/>
+        <NamedIndividual IRI="#Library"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#The_Ultimate_Finance_book"/>
+        <NamedIndividual IRI="#Roger_Mason"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#This_book_is_funny"/>
+        <NamedIndividual IRI="#Humor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#This_book_is_funny"/>
+        <NamedIndividual IRI="#Shelf_13"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#This_book_is_funny"/>
+        <NamedIndividual IRI="#Phonoteque"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#This_book_is_funny"/>
+        <NamedIndividual IRI="#Michelle_Sandoval"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasWritten"/>
+        <NamedIndividual IRI="#Uranus_Sagona"/>
+        <NamedIndividual IRI="#Greek_mythology"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasWritten"/>
+        <NamedIndividual IRI="#Walter_Rudin"/>
+        <NamedIndividual IRI="#Principles_of_Mathematical_analysis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasWritten"/>
+        <NamedIndividual IRI="#William_Gray"/>
+        <NamedIndividual IRI="#Fairy_Tales_and_Folklore"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#Wuthering_Heights"/>
+        <NamedIndividual IRI="#Romance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#Wuthering_Heights"/>
+        <NamedIndividual IRI="#Shelf_11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#Wuthering_Heights"/>
+        <NamedIndividual IRI="#Library"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#Wuthering_Heights"/>
+        <NamedIndividual IRI="#Emily_Brontë"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#1984"/>
+        <NamedIndividual IRI="#Narrative"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#1984"/>
+        <NamedIndividual IRI="#Shelf_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#1984"/>
+        <NamedIndividual IRI="#Study_Room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#1984"/>
+        <NamedIndividual IRI="#George_Orwell"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#Harry_Potter:_The_Goblet_of_Fire"/>
+        <NamedIndividual IRI="#Narrative"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#Harry_Potter:_The_Goblet_of_Fire"/>
+        <NamedIndividual IRI="#Shelf_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#Harry_Potter:_The_Goblet_of_Fire"/>
+        <NamedIndividual IRI="#Study_Room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#Harry_Potter:_The_Goblet_of_Fire"/>
+        <NamedIndividual IRI="#J.K.Rowling"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="#One,_No_One_and_One_Hundred_Thousand"/>
+        <NamedIndividual IRI="#Narrative"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="#One,_No_One_and_One_Hundred_Thousand"/>
+        <NamedIndividual IRI="#Shelf_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="#One,_No_One_and_One_Hundred_Thousand"/>
+        <NamedIndividual IRI="#Study_Room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isTaken"/>
+        <NamedIndividual IRI="#One,_No_One_and_One_Hundred_Thousand"/>
+        <NamedIndividual IRI="#Mario_Franco"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="#One,_No_One_and_One_Hundred_Thousand"/>
+        <NamedIndividual IRI="#Luigi_Pirandello"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGenre"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/mario/ontologies/2022/9/untitled-ontology-2#Zeno&apos;s_Conscience"/>
+        <NamedIndividual IRI="#Romance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAvailable"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/mario/ontologies/2022/9/untitled-ontology-2#Zeno&apos;s_Conscience"/>
+        <NamedIndividual IRI="#Shelf_11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocated"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/mario/ontologies/2022/9/untitled-ontology-2#Zeno&apos;s_Conscience"/>
+        <NamedIndividual IRI="#Library"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isWritten"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/mario/ontologies/2022/9/untitled-ontology-2#Zeno&apos;s_Conscience"/>
+        <NamedIndividual IRI="#Italo_Svevo"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Publisher"/>
+        <NamedIndividual IRI="#Adelphi"/>
+        <Literal>PUB001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_author"/>
+        <NamedIndividual IRI="#Agata_Christie"/>
+        <Literal>Agata</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Agata_Christie"/>
+        <Literal>AUT001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_name_author"/>
+        <NamedIndividual IRI="#Agata_Christie"/>
+        <Literal>Christie</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_author"/>
+        <NamedIndividual IRI="#Alessandro_Manzoni"/>
+        <Literal>Alessandro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Alessandro_Manzoni"/>
+        <Literal>AUT002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_name_author"/>
+        <NamedIndividual IRI="#Alessandro_Manzoni"/>
+        <Literal>Manzoni</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date_Book"/>
+        <NamedIndividual IRI="#Animal_Farm"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1945</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#Animal_Farm"/>
+        <Literal>BOOK003</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_student"/>
+        <NamedIndividual IRI="#Antonio_Curione"/>
+        <Literal>Antonio</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Student"/>
+        <NamedIndividual IRI="#Antonio_Curione"/>
+        <Literal>STU0001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Room"/>
+        <NamedIndividual IRI="#Archives"/>
+        <Literal>RO10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Arnold_Lobel"/>
+        <Literal>AUT018</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Room"/>
+        <NamedIndividual IRI="#Break_Room"/>
+        <Literal>RO09</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Genre"/>
+        <NamedIndividual IRI="#Computer_Science"/>
+        <Literal>GEN18</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Genre"/>
+        <NamedIndividual IRI="#Crime"/>
+        <Literal>GEN17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_author"/>
+        <NamedIndividual IRI="#Dante_Alighieri"/>
+        <Literal>Dante</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Dante_Alighieri"/>
+        <Literal>AUT003</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_name_author"/>
+        <NamedIndividual IRI="#Dante_Alighieri"/>
+        <Literal>Alighieri</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Publisher"/>
+        <NamedIndividual IRI="#De_Agostini"/>
+        <Literal>PUB002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Genre"/>
+        <NamedIndividual IRI="#Drama"/>
+        <Literal>GEN01</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_author"/>
+        <NamedIndividual IRI="#Elsa_Morante"/>
+        <Literal>Elsa</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Elsa_Morante"/>
+        <Literal>AUT004</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_name_author"/>
+        <NamedIndividual IRI="#Elsa_Morante"/>
+        <Literal>Morante</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Emily_Brontë"/>
+        <Literal>AUT019</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Genre"/>
+        <NamedIndividual IRI="#Fable"/>
+        <Literal>GEN02</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#Fables"/>
+        <Literal>BOOK018</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Genre"/>
+        <NamedIndividual IRI="#Fairy_Tale"/>
+        <Literal>GEN03</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#Fairy_Tales_and_Folklore"/>
+        <Literal>BOOK019</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Genre"/>
+        <NamedIndividual IRI="#Fiction"/>
+        <Literal>GEN04</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Genre"/>
+        <NamedIndividual IRI="#Finance"/>
+        <Literal>GEN19</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Genre"/>
+        <NamedIndividual IRI="#Folklore"/>
+        <Literal>GEN05</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_author"/>
+        <NamedIndividual IRI="#Franz_Kafka"/>
+        <Literal>Franz</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Franz_Kafka"/>
+        <Literal>AUT005</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_name_author"/>
+        <NamedIndividual IRI="#Franz_Kafka"/>
+        <Literal>Kafka</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_author"/>
+        <NamedIndividual IRI="#Fëdor_Dostoevskij"/>
+        <Literal>Fëdor</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Fëdor_Dostoevskij"/>
+        <Literal>AUT006</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_name_author"/>
+        <NamedIndividual IRI="#Fëdor_Dostoevskij"/>
+        <Literal>Dostoevskij</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_author"/>
+        <NamedIndividual IRI="#George_Orwell"/>
+        <Literal>George</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#George_Orwell"/>
+        <Literal>AUT007</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_name_author"/>
+        <NamedIndividual IRI="#George_Orwell"/>
+        <Literal>Orwell</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_author"/>
+        <NamedIndividual IRI="#Giovanni_Verga"/>
+        <Literal>Giovanni</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Giovanni_Verga"/>
+        <Literal>AUT008</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_name_author"/>
+        <NamedIndividual IRI="#Giovanni_Verga"/>
+        <Literal>Verga</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#Greek_mythology"/>
+        <Literal>BOOK020</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date_Book"/>
+        <NamedIndividual IRI="#Hamlet"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1623</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#Hamlet"/>
+        <Literal>BOOK004</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Genre"/>
+        <NamedIndividual IRI="#Historical"/>
+        <Literal>GEN06</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date_Book"/>
+        <NamedIndividual IRI="#History"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1974</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#History"/>
+        <Literal>BOOK005</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Publisher"/>
+        <NamedIndividual IRI="#Hoepli"/>
+        <Literal>PUB003</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Genre"/>
+        <NamedIndividual IRI="#Horror"/>
+        <Literal>GEN07</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#Human_body_anatomy"/>
+        <Literal>BOOK021</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Genre"/>
+        <NamedIndividual IRI="#Humor"/>
+        <Literal>GEN08</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date_Book"/>
+        <NamedIndividual IRI="#If_this_is_a_man"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1959</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#If_this_is_a_man"/>
+        <Literal>BOOK006</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Room"/>
+        <NamedIndividual IRI="#Info_Room"/>
+        <Literal>RO02</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Room"/>
+        <NamedIndividual IRI="#Internet_Room"/>
+        <Literal>RO03</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#It"/>
+        <Literal>BOOK022</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_author"/>
+        <NamedIndividual IRI="#Italo_Svevo"/>
+        <Literal>Italo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Italo_Svevo"/>
+        <Literal>AUT009</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_name_author"/>
+        <NamedIndividual IRI="#Italo_Svevo"/>
+        <Literal>Svevo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_author"/>
+        <NamedIndividual IRI="#J.K.Rowling"/>
+        <Literal>Joanne</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#J.K.Rowling"/>
+        <Literal>AUT010</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_name_author"/>
+        <NamedIndividual IRI="#J.K.Rowling"/>
+        <Literal>Rowling</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_author"/>
+        <NamedIndividual IRI="#J.R.R._Tolkien"/>
+        <Literal>John</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#J.R.R._Tolkien"/>
+        <Literal>AUT011</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_name_author"/>
+        <NamedIndividual IRI="#J.R.R._Tolkien"/>
+        <Literal>Tolkien</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#John_Douglas"/>
+        <Literal>AUT020</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_author"/>
+        <NamedIndividual IRI="#Jules_Verne"/>
+        <Literal>Jules</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Jules_Verne"/>
+        <Literal>AUT012</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_name_author"/>
+        <NamedIndividual IRI="#Jules_Verne"/>
+        <Literal>Verne</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Knowledge_Flow"/>
+        <Literal>AUT021</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Publisher"/>
+        <NamedIndividual IRI="#LaFeltrinelli"/>
+        <Literal>PUB005</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Publisher"/>
+        <NamedIndividual IRI="#La_Nuova_Italia"/>
+        <Literal>PUB004</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Room"/>
+        <NamedIndividual IRI="#Laboratory"/>
+        <Literal>RO04</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#Learning_Java"/>
+        <Literal>BOOK023</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_author"/>
+        <NamedIndividual IRI="#Lev_Tolstoj"/>
+        <Literal>Lev</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Lev_Tolstoj"/>
+        <Literal>AUT013</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_name_author"/>
+        <NamedIndividual IRI="#Lev_Tolstoj"/>
+        <Literal>Tolstoj</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Room"/>
+        <NamedIndividual IRI="#Library"/>
+        <Literal>RO06</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_author"/>
+        <NamedIndividual IRI="#Luigi_Pirandello"/>
+        <Literal>Luigi</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Luigi_Pirandello"/>
+        <Literal>AUT014</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_name_author"/>
+        <NamedIndividual IRI="#Luigi_Pirandello"/>
+        <Literal>Pirandello</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Marc_Loy"/>
+        <Literal>AUT022</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_student"/>
+        <NamedIndividual IRI="#Mario_Franco"/>
+        <Literal>Mario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Student"/>
+        <NamedIndividual IRI="#Mario_Franco"/>
+        <Literal>STU0002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_name_student"/>
+        <NamedIndividual IRI="#Mario_Franco"/>
+        <Literal>Franco</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_student"/>
+        <NamedIndividual IRI="#Mario_Rossi"/>
+        <Literal>Mario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Student"/>
+        <NamedIndividual IRI="#Mario_Rossi"/>
+        <Literal>STU0003</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_name_student"/>
+        <NamedIndividual IRI="#Mario_Rossi"/>
+        <Literal>Rossi</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Genre"/>
+        <NamedIndividual IRI="#Math"/>
+        <Literal>GEN20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Publisher"/>
+        <NamedIndividual IRI="#McGraw-Hill"/>
+        <Literal>PUB006</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Michelle_Sandoval"/>
+        <Literal>AUT023</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#Mindhunter"/>
+        <Literal>BOOK024</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Genre"/>
+        <NamedIndividual IRI="#Mithology"/>
+        <Literal>GEN09</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Publisher"/>
+        <NamedIndividual IRI="#Mondadori"/>
+        <Literal>PUB007</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Genre"/>
+        <NamedIndividual IRI="#Narrative"/>
+        <Literal>GEN10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Room"/>
+        <NamedIndividual IRI="#Narrative_Room"/>
+        <Literal>RO08</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Publisher"/>
+        <NamedIndividual IRI="#Novecento"/>
+        <Literal>PUB008</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Genre"/>
+        <NamedIndividual IRI="#Novel"/>
+        <Literal>GEN11</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Publisher"/>
+        <NamedIndividual IRI="#Pearson_Italia"/>
+        <Literal>PUB009</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Room"/>
+        <NamedIndividual IRI="#Phonoteque"/>
+        <Literal>RO07</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Genre"/>
+        <NamedIndividual IRI="#Poem"/>
+        <Literal>GEN12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Genre"/>
+        <NamedIndividual IRI="#Poetry"/>
+        <Literal>GEN13</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_author"/>
+        <NamedIndividual IRI="#Primo_Levi"/>
+        <Literal>Primo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Primo_Levi"/>
+        <Literal>AUT015</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_name_author"/>
+        <NamedIndividual IRI="#Primo_Levi"/>
+        <Literal>Levi</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#Principles_of_Mathematical_analysis"/>
+        <Literal>BOOK025</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Roger_Mason"/>
+        <Literal>AUT024</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Genre"/>
+        <NamedIndividual IRI="#Romance"/>
+        <Literal>GEN14</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_student"/>
+        <NamedIndividual IRI="#Rosanna_Acquafredda"/>
+        <Literal>Rosanna</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Student"/>
+        <NamedIndividual IRI="#Rosanna_Acquafredda"/>
+        <Literal>STU0004</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_name_student"/>
+        <NamedIndividual IRI="#Rosanna_Acquafredda"/>
+        <Literal>Acquafredda</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Genre"/>
+        <NamedIndividual IRI="#Scientific"/>
+        <Literal>GEN15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Genre"/>
+        <NamedIndividual IRI="#Short_Story"/>
+        <Literal>GEN16</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Stephen_King"/>
+        <Literal>AUT025</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Room"/>
+        <NamedIndividual IRI="#Study_Room"/>
+        <Literal>RO01</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date_Book"/>
+        <NamedIndividual IRI="#The_Betrothed"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1828</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#The_Betrothed"/>
+        <Literal>BOOK007</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date_Book"/>
+        <NamedIndividual IRI="#The_Castle"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1926</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#The_Castle"/>
+        <Literal>BOOK008</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date_Book"/>
+        <NamedIndividual IRI="#The_Divine_Comedy"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1472</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#The_Divine_Comedy"/>
+        <Literal>BOOK009</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date_Book"/>
+        <NamedIndividual IRI="#The_Idiot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1869</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#The_Idiot"/>
+        <Literal>BOOK010</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date_Book"/>
+        <NamedIndividual IRI="#The_Lord_of_the_RIngs"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1954</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#The_Lord_of_the_RIngs"/>
+        <Literal>BOOK011</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date_Book"/>
+        <NamedIndividual IRI="#The_Metamorphosis"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1915</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#The_Metamorphosis"/>
+        <Literal>BOOK012</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date_Book"/>
+        <NamedIndividual IRI="#The_Name_of_the_Rose"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1980</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#The_Name_of_the_Rose"/>
+        <Literal>BOOK013</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date_Book"/>
+        <NamedIndividual IRI="#The_Possessed"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1915</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#The_Possessed"/>
+        <Literal>BOOK015</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date_Book"/>
+        <NamedIndividual IRI="#The_Trial"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1914</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#The_Trial"/>
+        <Literal>BOOK016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#The_Ultimate_Finance_book"/>
+        <Literal>BOOK026</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#This_book_is_funny"/>
+        <Literal>BOOK027</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_author"/>
+        <NamedIndividual IRI="#Umberto_Eco"/>
+        <Literal>Umberto</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Umberto_Eco"/>
+        <Literal>AUT016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_name_author"/>
+        <NamedIndividual IRI="#Umberto_Eco"/>
+        <Literal>Eco</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Uranus_Sagona"/>
+        <Literal>AUT026</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#Walter_Rudin"/>
+        <Literal>AUT027</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#William_Gray"/>
+        <Literal>AUT028</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#first_name_author"/>
+        <NamedIndividual IRI="#William_Shakespeare"/>
+        <Literal>William</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Author"/>
+        <NamedIndividual IRI="#William_Shakespeare"/>
+        <Literal>AUT017</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#last_name_author"/>
+        <NamedIndividual IRI="#William_Shakespeare"/>
+        <Literal>Shakespeare</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#Wuthering_Heights"/>
+        <Literal>BOOK028</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date_Book"/>
+        <NamedIndividual IRI="#1984"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1949</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#1984"/>
+        <Literal>BOOK002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date_Book"/>
+        <NamedIndividual IRI="#Harry_Potter:_The_Goblet_of_Fire"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#Harry_Potter:_The_Goblet_of_Fire"/>
+        <Literal>BOOK014</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Room"/>
+        <NamedIndividual IRI="#Kid&apos;s_Library"/>
+        <Literal>RO05</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date_Book"/>
+        <NamedIndividual IRI="#One,_No_One_and_One_Hundred_Thousand"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1925</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="#One,_No_One_and_One_Hundred_Thousand"/>
+        <Literal>BOOK001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_Book"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/mario/ontologies/2022/9/untitled-ontology-2#Zeno&apos;s_Conscience"/>
+        <Literal>BOOK017</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGenre"/>
+        <Class IRI="#Book"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPublished"/>
+        <Class IRI="#Publisher"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWritten"/>
+        <Class IRI="#Author"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isAvailable"/>
+        <Class IRI="#Book"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isLocated"/>
+        <Class IRI="#Book"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isTaken"/>
+        <Class IRI="#Book"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isWritten"/>
+        <Class IRI="#Book"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGenre"/>
+        <Class IRI="#Genre"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPublished"/>
+        <Class IRI="#Book"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasWritten"/>
+        <Class IRI="#Book"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isAvailable"/>
+        <Class IRI="#Shelf"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isLocated"/>
+        <Class IRI="#Room"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isTaken"/>
+        <Class IRI="#Student"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isWritten"/>
+        <Class IRI="#Author"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#date_Book"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#first_name_author"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#first_name_student"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#id_Author"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#id_Book"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#id_Genre"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#id_Publisher"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#id_Room"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#id_Shelf"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#id_Student"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#last_name_author"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#last_name_student"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#date_Book"/>
+        <Class IRI="#Book"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#first_name_author"/>
+        <Class IRI="#Author"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#first_name_student"/>
+        <Class IRI="#Student"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_Author"/>
+        <Class IRI="#Author"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_Book"/>
+        <Class IRI="#Book"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_Genre"/>
+        <Class IRI="#Genre"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_Publisher"/>
+        <Class IRI="#Publisher"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_Room"/>
+        <Class IRI="#Room"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_Shelf"/>
+        <Class IRI="#Shelf"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id_Student"/>
+        <Class IRI="#Student"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#last_name_author"/>
+        <Class IRI="#Author"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#last_name_student"/>
+        <Class IRI="#Student"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#date_Book"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#first_name_author"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#first_name_student"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_Author"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_Book"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_Genre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_Publisher"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_Room"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_Shelf"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id_Student"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#last_name_author"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#last_name_student"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Author</IRI>
+        <Literal>This class defines the author of the book.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Book</IRI>
+        <Literal>This class defines the book.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Genre</IRI>
+        <Literal>This class defines the genre of the book.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Publisher</IRI>
+        <Literal>This class defines the publisher of the book.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Room</IRI>
+        <Literal>This class defines the room.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Shelf</IRI>
+        <Literal>This class defines the shelf of the library.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Student</IRI>
+        <Literal>This class defines the student.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
