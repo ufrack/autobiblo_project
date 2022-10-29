@@ -1,0 +1,57 @@
+You need to insert this string in the SPARQL Query:
+PREFIX table: <http://www.semanticweb.org/mario/ontologies/2022/9/library_autobiblo#>
+-----------------------------------------------------------------------------------------
+QUERY_1: Shows the author that has written both "1984" and "Animal Farm"
+
+Author that hasWritten value 1984 and Author that hasWritten value Animal_Farm
+
+-
+
+QUERY_2: Shows the books that are a Romance (DL)
+
+Book that hasGenre value Romance
+
+-
+
+QUERY_3: Shows the books that are located specifically in "Shelf_2" (DL)
+
+Book that isAvailable value Shelf_2
+
+-
+
+QUERY_4: Shows the books that are located in the Study Room (DL)
+
+Book that isLocated value Study_Room
+
+-
+
+QUERY 5: Display all the books with their ID, Genre and Author (SPARQL)
+SELECT *
+	WHERE { 
+		?Book table:id_Book ?ID.
+		?Book table:hasGenre ?Genre.
+		?Book table:isWritten ?Author.
+		} ORDER BY ASC(?ID)
+
+QUERY_6: Display the authors with their ID that have written at least a book (SPARQL)
+SELECT *
+	WHERE { 
+		?Author table:id_Author ?ID.
+		?Author table:hasWritten ?Book.
+		} ORDER BY ASC(?ID)
+
+QUERY_7: Display all the books with their ID and location (SPARQL)
+SELECT *
+	WHERE { 
+		?Book table:id_Book ?ID.
+		?Book table:isAvailable ?Shelf.
+		?Book table:isLocated ?Location.
+		} ORDER BY ASC(?ID)
+
+QUERY_8: Display the students that have taken a book (SPARQL)
+SELECT *
+	WHERE { 
+		?Student table:id_Student ?ID.
+		?Book table:isTaken ?Student
+		} ORDER BY ASC(?ID)
+
