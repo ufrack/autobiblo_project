@@ -2,7 +2,7 @@
 ## Panoramica
 Sistema automatizzato di raccomandazione e gestione di librerie, che ha come scopo di incentivare la lettura di libri non solo educazionali, nelle scuole dell’obbligo di qualsiasi grado, offrendo un servizio semplice ed efficace agli studenti di qualunque età.
 
-###Obiettivi progetto
+### Obiettivi progetto
  - Concettualizzare le disposizioni di **librerie**, **biblioteche** o **zone culturali** all’interno delle scuole, 
  - Progettare il sistema rappresentandolo con un **grafo**, per poterlo successivamente gestire
  - Creare un’**ontologia** adeguata per rappresentare il sistema gestionale della biblioteca in questione
