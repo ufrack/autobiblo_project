@@ -182,6 +182,8 @@ class KnnRecommender:
             if idx in hashmap.values():
                 print('{0}: {1}, with distance of {2}'.format(i + 1, reverse_hashmap[idx], dist))
                 book_list.append(reverse_hashmap[idx])
+            else:
+                print(str(i+1) + ": Not found")
         return book_list
 
 
