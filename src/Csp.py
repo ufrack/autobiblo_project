@@ -1,4 +1,4 @@
-from constraint import *
+from constraint import *  # including csp constraint library
 import bisect
 
 
@@ -20,7 +20,8 @@ def checkTime(time, date):
      function that check if the input parameter "time" is consistent to library's timetable
     :param time:time expressed in the format HH.MM (hours.minutes)
     :param date: date chosen
-    :return:
+    :return: a string that match with the input
+
     """
 
     hour = time.split('.')  # splitting the input string in 2 substring
@@ -47,6 +48,11 @@ def checkTime(time, date):
 
 
 def nameToId(name):
+    """
+    function that return the id of a book
+    :param name: book name
+    :return:  book id
+    """
     if name.lower() == '1984':
         return '1'
     elif name.lower() == 'animal farm':
@@ -108,6 +114,11 @@ def nameToId(name):
 
 
 def idToName(id):
+    """
+    function that return the name of a book, starting from its id
+    :param id:  book id
+    :return: book name string
+    """
     if id == 1:
         return '1984'
     elif id == 2:
@@ -168,11 +179,14 @@ def idToName(id):
         return 'name not found'
 
 
-# funzione per prenotare il libro
 def borrowABook(list1, list2):
-    if list1 == []:
-        print("Rightnow all books are unavailable, there's nothing to borrow")
-        return
+    """
+    function that allow users to borrow a book. after printing the list of available book, users can choose
+    the one that they want to borrow
+    :param list1: list of available books
+    :param list2: list of unavailable books
+    :return: id of the borrowed book
+    """
     print("list of unavailable book")
     for book in list2:
         print("\n\t", idToName(book))
@@ -188,6 +202,12 @@ def borrowABook(list1, list2):
 
 
 def difference(list1, list2):
+    """
+    the function return a new list of element, that corresponds to list1 - list2
+    :param list1: first list
+    :param list2: second list
+    :return: third list of element (list1 - list2)
+    """
     list3 = []
     for element in list1:
         if element not in list2:
@@ -196,10 +216,11 @@ def difference(list1, list2):
 
 
 def returnABook(list2):
-    if list2 == []:
-        print("Rightnow all books are available, there's nothing to return")
-        return
-
+    """
+    function that allows user to return a book, which was unavailable in the library
+    :param list2: list of books that are currently unavailable (that have to be return)
+    :return: id of book returned
+    """
     print("here there's the list of unavailable book")
     for book in list2:
         print("\n\t", idToName(book))
@@ -210,47 +231,58 @@ def returnABook(list2):
 
 
 def checkConstraint(day, time, book, list, op):
-
+    """
+    function that check if the parameters observ the constraint, before borrowing or returning a book.
+    :param day:string =  day of the week
+    :param time:string =  hour
+    :param book: int = id of the book returned/borrowed
+    :param list: list of constraint
+    :param op: int that correspond to the operation that the user's doing ( 1 = borrow a book, 2 = return a book)
+    :return: boolean value (true if the operation op is possible, false otherwise)
+    """
+    # for borrowing a book
     if op == 1:
-        # formato tupla : {{'Day': 6, 'Time': 19, 'idBookUn': 11}
+
         day += ','
         time += ','
         id = str(book)
         id += '}'
+        # element : {{'Day': 6, 'Time': 19, 'idBookUn': 11}
         for element in list:
 
             strings = str(element)
             strings = strings.split(' ')
-            # print(strings)
             if (day == strings[1]) and (time == strings[3]) and (id == strings[5]):
-                print("sono qua")
                 return True
 
         return False
 
+    # for returning a book
     elif op == 2:
-        # formato tupla: {'Day': 6, 'idBookUn': 11, 'Time': 19}
+
         day += ','
         id = str(book)
         id += ','
         time += '}'
 
+        # element: {'Day': 6, 'idBookUn': 11, 'Time': 19}
         for element in list:
             strings = str(element)
             strings = strings.split(' ')
-            # print(strings)
 
-            #            print(day)
-            #            print(id)
-            #            print(time)
-            if (day == strings[1]) and (id == strings[3]) and (time == strings[5]):
-                print("sono qui")
+            if ((day == strings[1]) and (id == strings[3]) and (time == strings[5])) or \
+                    ((id == strings[1]) and (day == strings[3]) and (time == strings[5])):
                 return True
 
         return False
 
 
 def constraint(list):
+    """
+    function that create a list of constraint
+    :param list: list of books (available or unavailable)
+    :return: objectProblem = constraint in list form
+    """
     problem = Problem()
     problem.addVariable("Day", [1, 2, 3, 4, 5, 6])
     problem.addVariable("Time", [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19])
@@ -273,97 +305,35 @@ def constraint(list):
     return objectProblem
 
 
-"""
-def returnConstraint(list2):
-    problem = Problem()
-    problem.addVariable("Day", [1, 2, 3, 4, 5, 6])
-    problem.addVariable("Time", [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19])
-    problem.addVariable("idBookUn", list2)
-    problem.addConstraint(lambda Day, Time, idBookUn:
-                          (Day == 1 and 9 <= Time < 12) or
-                          (Day == 1 and 16 <= Time < 19) or
-                          (Day == 2 and 9 <= Time < 12) or
-                          (Day == 2 and 16 <= Time < 19) or
-                          (Day == 3 and 9 <= Time < 12) or
-                          (Day == 3 and 16 <= Time < 19) or
-                          (Day == 4 and 9 <= Time < 12) or
-                          (Day == 4 and 16 <= Time < 19) or
-                          (Day == 5 and 9 <= Time < 12) or
-                          (Day == 5 and 16 <= Time < 19) or
-                          (Day == 6 and 9 <= Time < 12)
-                          )
-    objectProblem = problem.getSolutions()
-    return objectProblem
-"""
-
 if __name__ == "__main__":
+    # total books
     book = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
             20, 21, 22, 23, 24, 25, 26, 27, 28]
+    # list of unavailable books, at the beginning
     bookBorrowed = [1, 7, 11, 18, 20, 25]
+
+    # list of available book
+    actualBook = difference(book, bookBorrowed)
 
     keepOn = 0
 
     while keepOn != 2:
-        """
-        problem = Problem()
-        problem2 = Problem()
-        problem.addVariable("Day", [1, 2, 3, 4, 5, 6])
-        problem2.addVariable("Day", [1, 2, 3, 4, 5, 6])
-        problem.addVariable("Time", [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19])
-        problem2.addVariable("Time", [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19])
 
-        actualBook = difference(book, bookBorrowed)
-
-        problem.addVariable("idBookA", actualBook)
-        problem2.addVariable("idBookUn", bookBorrowed)
-
-        problem.addConstraint(lambda Day, Time, idBookA:
-                              (Day == 1 and 9 <= Time < 12) or
-                              (Day == 1 and 16 <= Time < 19) or
-                              (Day == 2 and 9 <= Time < 12) or
-                              (Day == 2 and 16 <= Time < 19) or
-                              (Day == 3 and 9 <= Time < 12) or
-                              (Day == 3 and 16 <= Time < 19) or
-                              (Day == 4 and 9 <= Time < 12) or
-                              (Day == 4 and 16 <= Time < 19) or
-                              (Day == 5 and 9 <= Time < 12) or
-                              (Day == 5 and 16 <= Time < 19) or
-                              (Day == 6 and 9 <= Time < 12)
-                              )
-
-        # ogni volta che riparte il ciclo questo mi sminchia tutto
-        problem2.addConstraint(lambda Day, Time, idBookUn:
-                               (Day == 1 and 9 <= Time < 12) or
-                               (Day == 1 and 16 <= Time < 19) or
-                               (Day == 2 and 9 <= Time < 12) or
-                               (Day == 2 and 16 <= Time < 19) or
-                               (Day == 3 and 9 <= Time < 12) or
-                               (Day == 3 and 16 <= Time < 19) or
-                               (Day == 4 and 9 <= Time < 12) or
-                               (Day == 4 and 16 <= Time < 19) or
-                               (Day == 5 and 9 <= Time < 12) or
-                               (Day == 5 and 16 <= Time < 19) or
-                               (Day == 6 and 9 <= Time < 12)
-                               )
-
-        objectProblem = problem.getSolutions()
-        # print(objectProblem)
-        objectProblem2 = problem2.getSolutions()
-        # non ho capito perché  anziche l'ordine day-time-id mi fa le tuple come day-id-time
-        print(objectProblem2)
-        """
-        actualBook = difference(book, bookBorrowed)
-
+        # choosing the day
         print("insert day as integer: \n1:Monday\n2:Tuesday\n3:Wednesday\n4:Thursday\n5:Friday\n6:Saturday\n")
         day = input("day: \n")
         if checkDay(day) is False:
             print("Wrong day format")
             exit(0)
+        # choosing the time
         print("insert time in the following format: [HH].[MM] (example 10.20)\n")
         time = input("time: \n")
         hour = checkTime(time, day)
+        # choosing the operation
         choice = input("are you going to borrow or return a book? write 1 to borrow or 2 to return\n")
-        if choice == '1':
+
+        if choice == '1' and bool(actualBook):
+            # borrowing a book
             bookChoice = borrowABook(book, bookBorrowed)
             if checkConstraint(day, hour, bookChoice, constraint(actualBook), int(choice)):
                 print("You can take this book")
@@ -371,23 +341,29 @@ if __name__ == "__main__":
                 actualBook.remove(bookChoice)
                 bisect.insort(bookBorrowed, bookChoice)
                 print("Operation Done ... Thank you for borrowing a book")
-                print(actualBook)  # lo elimina correttamente
-                print(bookBorrowed)
+                # print(actualBook)
+                # print(bookBorrowed)
             else:
                 print("We are sorry, but for some reason you can't take this book (constraints problems occurred)")
 
-        elif choice == '2':
+        elif choice == '2' and bool(bookBorrowed):
+            # returning a book
             bookChoice = returnABook(bookBorrowed)
             if checkConstraint(day, hour, bookChoice, constraint(bookBorrowed), int(choice)):
                 print("Thank you for returning this book")
                 # update list
                 bookBorrowed.remove(bookChoice)
                 bisect.insort(actualBook, bookChoice)
-                print(actualBook)
-                print(bookBorrowed)
+                # print(actualBook)
+                # print(bookBorrowed)
                 print("Operation done successfully!")
             else:
                 print("We are sorry, but for some reason you can't return this book (constraints problems occurred)")
+
+        if bool(bookBorrowed):
+            print("Rightnow all books are available, there's nothing to return")
+        elif bool(actualBook):
+            print("Rightnow all books are unavailable, there's nothing to borrow")
 
         keepOn = int(input("\nDo you need something more? press 1 to continue or 2 to leave:\n"))
         if keepOn == 2:
