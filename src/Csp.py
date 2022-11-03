@@ -1,6 +1,8 @@
 from constraint import *  # including csp constraint library
 import bisect
 
+import GraphSearch
+
 
 def checkDay(day):
     """
@@ -43,7 +45,7 @@ def checkTime(time, date):
             print("We're sorry, but the library is currently closed.")
             exit(0)
         else:
-            print("we're open")
+            print("We're open")
             return str(hour)
 
 
@@ -187,10 +189,10 @@ def borrowABook(list1, list2):
     :param list2: list of unavailable books
     :return: id of the borrowed book
     """
-    print("list of unavailable book")
+    print("List of unavailable book")
     for book in list2:
         print("\n\t", idToName(book))
-    print("otherwise, you can chose a book to borrow from the below list :")
+    print("Otherwise, you can chose a book to borrow from the below list :")
     list3 = difference(list1, list2)
     for book in list3:
         print("\n\t", idToName(book))
@@ -221,10 +223,10 @@ def returnABook(list2):
     :param list2: list of books that are currently unavailable (that have to be return)
     :return: id of book returned
     """
-    print("here there's the list of unavailable book")
+    print("Here's the list of unavailable book")
     for book in list2:
         print("\n\t", idToName(book))
-    name = input("which book are you returning?")
+    name = input("Which book are you returning?")
     bookreturned = int(nameToId(name))
 
     return bookreturned
@@ -301,7 +303,6 @@ def constraint(list):
                           (Day == 6 and 9 <= Time < 12)
                           )
     objectProblem = problem.getSolutions()
-    print(objectProblem)
     return objectProblem
 
 
@@ -320,17 +321,17 @@ if __name__ == "__main__":
     while keepOn != 2:
 
         # choosing the day
-        print("insert day as integer: \n1:Monday\n2:Tuesday\n3:Wednesday\n4:Thursday\n5:Friday\n6:Saturday\n")
-        day = input("day: \n")
+        print("Insert day as integer: \n1:Monday\n2:Tuesday\n3:Wednesday\n4:Thursday\n5:Friday\n6:Saturday\n")
+        day = input("Day: \n")
         if checkDay(day) is False:
             print("Wrong day format")
             exit(0)
         # choosing the time
-        print("insert time in the following format: [HH].[MM] (example 10.20)\n")
-        time = input("time: \n")
+        print("Insert time in the following format: [HH].[MM] (example 10.20)\n")
+        time = input("Time: \n")
         hour = checkTime(time, day)
         # choosing the operation
-        choice = input("are you going to borrow or return a book? write 1 to borrow or 2 to return\n")
+        choice = input("Do you want to borrow or return a book? write 1 to borrow or 2 to return\n")
 
         if choice == '1' and bool(actualBook):
             # borrowing a book
@@ -340,7 +341,10 @@ if __name__ == "__main__":
                 # update list
                 actualBook.remove(bookChoice)
                 bisect.insort(bookBorrowed, bookChoice)
-                print("Operation Done ... Thank you for borrowing a book")
+                print("Operation Done ... Thank you for borrowing a book\n")
+                searchChoice = int(input("Do you want to search the book? write 1 to search it or 2 to only borrow it\n"))
+                if searchChoice == 1:
+                    GraphSearch.research(bookChoice)
                 # print(actualBook)
                 # print(bookBorrowed)
             else:
@@ -359,11 +363,12 @@ if __name__ == "__main__":
                 print("Operation done successfully!")
             else:
                 print("We are sorry, but for some reason you can't return this book (constraints problems occurred)")
-
+        """
         if bool(bookBorrowed):
             print("Rightnow all books are available, there's nothing to return")
         elif bool(actualBook):
             print("Rightnow all books are unavailable, there's nothing to borrow")
+        """
 
         keepOn = int(input("\nDo you need something more? press 1 to continue or 2 to leave:\n"))
         if keepOn == 2:
