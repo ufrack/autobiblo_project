@@ -1,11 +1,18 @@
-from igraph import *
+from igraph import *  # including graph library
 import Csp
+
+# graph vertex setup
 vertex_values = []
 for x in range(0, 36):
     vertex_values.append(str(x))
 
 
 def get_shelf(book_id):
+    """
+    returns the corrispective shelf of the book
+    :param book_id: book id
+    :return: shelf number
+    """
     if book_id == 2 or book_id == 14 or book_id == 16:
         n_shelf = 1
     if book_id == 1 or book_id == 3 or book_id == 5 or book_id == 6 or book_id == 7 or book_id == 12:
@@ -44,6 +51,11 @@ def get_shelf(book_id):
 
 
 def get_nodes(shelf):
+    """
+    returns the corrispective node of the shelf
+    :param shelf: shelf to search node for
+    :return: node number
+    """
     if shelf == 1:
         return 2
     if shelf == 2:
@@ -85,6 +97,13 @@ def get_nodes(shelf):
 
 
 def bfs(graph, start, end):
+    """
+    breath first search algorithm
+    :param graph: graph to search for
+    :param start: start node
+    :param end: end node
+    :return: cost of the path
+    """
     # maintain a queue of paths
     queue = [[start]]
     # push the first path into the queue
@@ -274,6 +293,6 @@ def research(book):
     start_node = 0
 
     for shelf, color in zip(shelves, colors):
-        # print lowest-cost-first search path from movie to movie
+        # print breath first search path to the relative book
         input("Press [enter] to print path to '{}'".format(Csp.idToName(book)))
         print_solution(graph, find_solution(graph, start_node, book), weights, color)
