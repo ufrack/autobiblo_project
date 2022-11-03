@@ -1,4 +1,4 @@
-# AutoBiblo 22/23
+# AutoBiblo 21/22
 ## Panoramica
 Sistema automatizzato di raccomandazione e gestione di librerie, che ha come scopo di incentivare la lettura di libri non solo educazionali, nelle scuole dell’obbligo di qualsiasi grado, offrendo un servizio semplice ed efficace agli studenti di qualunque età.
 
