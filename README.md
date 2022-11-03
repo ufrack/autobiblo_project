@@ -1,17 +1,20 @@
-# AutoBiblo 21/22
+# AutoBiblo project - Anno Accademico 2021/2022
+
 ## Panoramica
-Sistema automatizzato di raccomandazione e gestione di librerie, che ha come scopo di incentivare la lettura di libri non solo educazionali, nelle scuole dell’obbligo di qualsiasi grado, offrendo un servizio semplice ed efficace agli studenti di qualunque età.
+Il progetto realizzato rappresenta un’automazione della gestione di una biblioteca scolastica, con l’aggiunta di un sistema di raccomandazione dei libri, con lo scopo di incentivare la lettura , offrendo un servizio semplice ed efficace.
 
-### Obiettivi progetto
- - Concettualizzare le disposizioni di **librerie**, **biblioteche** o **zone culturali** all’interno delle scuole, 
- - Progettare il sistema rappresentandolo con un **grafo**, per poterlo successivamente gestire
- - Creare un’**ontologia** adeguata per rappresentare il sistema gestionale della biblioteca in questione
- - Inserire le **istanze** di **entitá/individui** nell’ontologia per poter simulare la biblioteca
- - Rendere visualizzabile l’ontologia e **query** che dimostrano la sua funzionalitá
- - Appropriarsi di un **dataset** di libri adeguato, per poi selezionare una quantitá moderata di libri/autori adeguati ad una libreria italiana scolastica
- - Strutturare il **recommender system** (**KNN** o simili supervisionati) utilizzando il dataset selezionato
- - Definire e implementare l’algoritmo di **ricerca** sul **grafo pesato** 
- - Definire il **CSP**(Constraint Satisfaction Problem) per la gestione di prestito dei libri nel sistema
- - Realizzare un **programma runnable** per un utilizzo simulativo dell’intero sistema
- - Realizzare una **relazione** che spieghi ogni singolo step nella realizzazione del progetto
+### Obiettivi 
+-	Progettare un sistema sotto forma di **grafo**, che specifichi l’organizzazione della biblioteca, così da poterlo utilizzare nelle fasi successive
+-	Creare un’**ontologia adeguata**, che possa rappresentare al meglio il sistema gestionale della biblioteca. 
+      - Di seguito, popolare tale ontologia, inserendo le istanze entità-individui, così da poter effettuare delle simulazioni 
+      -	Dimostrare le funzionalità attraverso delle query, che ci permettono di visualizzare l’ontologia
+-	Modellare, utilizzando **CSP** (Constraint Satisfaction Problem), un sistema per gestire le prenotazioni dei libri presenti nella biblioteca e relative restituzioni
+-	Definire ed implementare un algoritmo di **ricerca sul grafo** pesato, realizzato al primo punto, così da poter esplicitare il percorso da seguire per trovare, più agilmente, un determinato libro nell’ambiente dalla biblioteca
+-	Appropriarsi di un dataset di libri adeguato e strutturare un **recommender system**, utilizzando il **KNN**, per poter consigliare agli studenti dei libri, basandoci sulle similarità tra un libro di interesse e quelli presenti nel dataset
+-	Fare un resoconto del sistema realizzato, effettuando vari test e confrontando i risultati ottenuti con quelle che erano le aspettative
 
+
+### Realizzato dagli studenti
+- Mario Franco, matricola 717768
+-	Antonio Curione,  matricola 716131
+- Rosanna Acquafredda, matricola 724972
