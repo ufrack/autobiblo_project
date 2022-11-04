@@ -3,8 +3,7 @@ from fuzzywuzzy import fuzz
 from gensim.parsing.preprocessing import remove_stopwords
 from scipy.sparse import csr_matrix
 from sklearn.neighbors import NearestNeighbors
-#import utils
-#import graph
+
 
 class KnnRecommender:
     def __init__(self):
@@ -134,8 +133,6 @@ class KnnRecommender:
         try:
             idx = self._fuzzy_matching(hashmap, fav_book)
             # inference
-            #print('qui')
-            #print(idx)
             distances, indices = model.kneighbors(
                 data[idx],
                 n_neighbors=n_recommendations + 1)
@@ -175,8 +172,6 @@ class KnnRecommender:
         # print results
         book_list = []
         reverse_hashmap = {v: k for k, v in hashmap.items()}
-        #print(reverse_hashmap)
-        #print(raw_recommends)
         print('Recommendations for : ' + fav_book)
         for i, (idx, dist) in enumerate(raw_recommends):
             if idx in hashmap.values():
@@ -187,20 +182,15 @@ class KnnRecommender:
         return book_list
 
 
-if __name__ == '__main__':
-    #input("Press [enter] to show planimetry of the shop")
-    #utils.show_planimetry()
-    book_name = input('Insert favourite book name:\n')
+def doKNN():
+    print("_____________________________________________________________________________________________________")
+    book_name = input('Insert favourite or last read book name:\n')
     top_n = 10
     recommender = KnnRecommender()
     recommendation = recommender.make_recommendations(book_name, top_n)
     if recommendation is None:
         print("Not found")
-    else:
-        print("Found")
-    '''
-    if recommendation is not None:
-        graph.research(recommendation)
-    else:
-        print("Not found")
-    '''
+    # else:
+    #   print("Found")
+    print("_____________________________________________________________________________________________________")
+

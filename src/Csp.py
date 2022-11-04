@@ -306,7 +306,8 @@ def constraint(list):
     return objectProblem
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
+def doCSP():
     # total books
     book = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
             20, 21, 22, 23, 24, 25, 26, 27, 28]
@@ -345,8 +346,6 @@ if __name__ == "__main__":
                 searchChoice = int(input("Do you want to search the book? write 1 to search it or 2 to only borrow it\n"))
                 if searchChoice == 1:
                     GraphSearch.research(bookChoice)
-                # print(actualBook)
-                # print(bookBorrowed)
             else:
                 print("We are sorry, but for some reason you can't take this book (constraints problems occurred)")
 
@@ -358,8 +357,6 @@ if __name__ == "__main__":
                 # update list
                 bookBorrowed.remove(bookChoice)
                 bisect.insort(actualBook, bookChoice)
-                # print(actualBook)
-                # print(bookBorrowed)
                 print("Operation done successfully!")
             else:
                 print("We are sorry, but for some reason you can't return this book (constraints problems occurred)")
@@ -371,6 +368,3 @@ if __name__ == "__main__":
         """
 
         keepOn = int(input("\nDo you need something more? press 1 to continue or 2 to leave:\n"))
-        if keepOn == 2:
-            print("Goodbye and thank you!")
-            exit(0)
