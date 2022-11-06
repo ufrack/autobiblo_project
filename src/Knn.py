@@ -23,12 +23,6 @@ class KnnRecommender:
         """
         prepare data for recommender from csv files
         """
-        # read data
-        #headers = pd.read_csv(self.path_books, encoding='unicode_escape', nrows=0, sep=';').columns.tolist()
-        #print(headers)
-        #columns = ['title']
-        #pd.read_csv(self.path_books, encoding='unicode_escape', usecols=columns, sep=';').to_csv('Books.csv', index=False)
-
         df_books = pd.read_csv(
             self.path_books,
             encoding="ISO-8859-1",
@@ -47,10 +41,7 @@ class KnnRecommender:
             usecols=['user', 'isbn', 'rating'],
             dtype={'user': 'int32', 'isbn': 'str', 'rating': 'float32'})
 
-        #df_books_ratings = pd.merge(df_ratings, df_books, on='isbn')
-        #print(df_ratings)
-        #print(df_books)
-        # filter users who rated less than 50 books and books with less than 50 rates
+        # filter users who rated less than 10 books and books with less than 10 rates
         df_books_cnt = pd.DataFrame(df_ratings.groupby('isbn').size(), columns=['count'])
         popular_books = list(df_books_cnt.query('count >= @self.book_rating_lim').index)
         books_filter = df_ratings.isbn.isin(popular_books).values
@@ -60,17 +51,20 @@ class KnnRecommender:
         users_filter = df_ratings.user.isin(active_users).values
 
         df_ratings_filtered = df_ratings[books_filter & users_filter]
-        # create book user matrix
+
+        # merge datasets on isbn
         df_books_ratings = pd.merge(df_ratings_filtered, df_books, on='isbn')
-        #print(df_books_ratings)
+
+        # create book user matrix
         book_user_mat = df_books_ratings.pivot(index='isbn', columns='user', values='rating').fillna(0)
+        book_user_mat_sparse = csr_matrix(book_user_mat.values)
 
         # hashmap from book title to index
         hashmap = {
             book: i for i, book in
             enumerate(list(df_books.set_index('isbn').loc[book_user_mat.index].title))
         }
-        book_user_mat_sparse = csr_matrix(book_user_mat.values)
+
 
         return book_user_mat_sparse, hashmap
 
@@ -168,7 +162,5 @@ def doKNN():
     recommendation = recommender.make_recommendations(book_name, top_n)
     if recommendation is None:
         print("Not found")
-    # else:
-    #   print("Found")
     print("_____________________________________________________________________________________________________")
 
