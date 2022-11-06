@@ -21,8 +21,7 @@ class KnnRecommender:
     @property
     def _prep_data(self):
         """
-        prepare data for recommender
-        join dataframes
+        prepare data for recommender from csv files
         """
         # read data
         #headers = pd.read_csv(self.path_books, encoding='unicode_escape', nrows=0, sep=';').columns.tolist()
@@ -77,18 +76,10 @@ class KnnRecommender:
 
     def _fuzzy_matching(self, hashmap, fav_book):
         """
-        return the closest match via fuzzy ratio.
-        If no match found, return None
-
-        params:
-
-        hashmap: dict, map book title name to index of the book in data
-
-        fav_book: str, name of user input book
-
-        return:
-
-        index of the closest match
+        return the closest match between data e favourite book, return None with no match
+        :param fav_book: name of user favourite book
+        :param hashmap: map book title to index of the book in data
+        :return: list of titles and index that match with the favourite book
         """
         match_tuple = []
         # get match
@@ -106,25 +97,15 @@ class KnnRecommender:
             return match_tuple[0][1]
 
     def _inference(self, model, data, hashmap,
-                   fav_book, n_recommendations):
+                   fav_book, n_rec):
         """
-        return top n similar book recommendations based on user's input book
-
-        params:
-
-        model: sklearn model, knn model
-
-        data: book-user matrix
-
-        hashmap: dict, map book title name to index of the book in data
-
-        fav_book: str, name of user input book
-
-        n_recommendations: int, top n recommendations
-
-        return:
-
-        list of top n similar book recommendations
+        return top n similar book recommendations based on user's input book and knn
+        :param model: sklearn-knn model
+        :param data: book-user sparse matrix
+        :param hashmap: map book title to index of the book in data
+        :param fav_book: name of user favourite book
+        :param n_rec: number of recommendations
+        :return: top n similar book recommendations
         """
         # fit
         model.fit(data)
@@ -135,7 +116,7 @@ class KnnRecommender:
             # inference
             distances, indices = model.kneighbors(
                 data[idx],
-                n_neighbors=n_recommendations + 1)
+                n_neighbors=n_rec + 1)
         except IndexError:
             exit(0)
         # get list of raw idx of recommendations
@@ -148,27 +129,24 @@ class KnnRecommender:
                     )
                 ),
                 key=lambda x: x[1]
-            )[1:n_recommendations + 1]
+            )[1:n_rec + 1]
 
         # return recommendation (isbn, distance)
         return raw_recommends
 
-    def make_recommendations(self, fav_book, n_recommendations):
+    def make_recommendations(self, fav_book, n_rec):
         """
-        make top n books recommendations
-
-        params:
-
-        fav_book: str, name of user input book
-
-        n_recommendations: int, top n recommendations
+        return top n books recommendations
+        :param fav_book: name of user favourite book
+        :param n_rec: number of recommendations
+        :return: top n books recommendations
         """
         # get data
         book_user_mat_sparse, hashmap = self._prep_data
         # get recommendations
         raw_recommends = self._inference(
             self.model, book_user_mat_sparse, hashmap,
-            fav_book, n_recommendations)
+            fav_book, n_rec)
         # print results
         book_list = []
         reverse_hashmap = {v: k for k, v in hashmap.items()}
