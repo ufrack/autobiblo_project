@@ -1,4 +1,6 @@
+import cairo
 from igraph import *  # including graph library
+
 import Csp
 
 # graph vertex setup
@@ -187,14 +189,15 @@ def setup_graph():
     """
     a = [('0', '1', 5), ('1', '2', 3), ('2', '3', 4), ('3', '4', 4), ('4', '5', 2), ('5', '6', 5), ('5', '7', 4),
          ('6', '7', 3), ('8', 9, 1), ('9', '10', 4), ('1', '11', 3), ('11', '12', 5), ('11', '29', 5), ('1', '29', 5),
-         ('29', '13', 3), ('13', '14', 3), ('29', '30', 1), ('30', '31', 3), ('30', '15', 3), ('31', '16', 3), ('16', '17', 2),
-         ('31', '32', 5), ('32', '18', 2), ('32', '19', 4), ('19', '20', 3), ('32', '22', 4), ('32', '21', 6),  ('21', '23', 2),
+         ('29', '13', 3), ('13', '14', 3), ('29', '30', 1), ('30', '31', 3), ('30', '15', 3), ('31', '16', 3),
+         ('16', '17', 2),
+         ('31', '32', 5), ('32', '18', 2), ('32', '19', 4), ('19', '20', 3), ('32', '22', 4), ('32', '21', 6),
+         ('21', '23', 2),
          ('22', '19', 6), ('22', '21', 6), ('19', '21', 8), ('1', '28', 1), ('28', '24', 2), ('28', '8', 2),
          ('28', '27', 3), ('28', '26', 4), ('28', '25', 4), ('27', '25', 3), ('25', '26', 2), ('26', '27', 3)]
 
     edge = []
     weights = []
-
     for i in range(40):
 
         for j in range(2):
@@ -214,6 +217,7 @@ def setup_graph():
 
     graph.add_edges(list1)
     graph.es['weight'] = weights
+    graph.es['label'] = weights
     edges = graph.get_edgelist()
     return graph, edges, weights
 
@@ -261,6 +265,7 @@ def print_solution(graph, solution, weights, color):
     g = Graph(edges)
     vertex_set = set(solution)
     g.vs["color"] = "yellow"
+    g.vs["size"] = 22
     g.es["label"] = weights
     try:
         sol_edges = g.vs.select(vertex_set)
@@ -270,7 +275,7 @@ def print_solution(graph, solution, weights, color):
 
     sol_edges["color"] = color
     g.layout(layout='auto')
-    plot(g, vertex_label=vertex_values)
+    plot(g, "grafico.png", vertex_label=vertex_values)
 
 
 def research(book):
@@ -280,19 +285,15 @@ def research(book):
     :param book: book to search for
     :return:
     """
-
+    print("Thank you for borrowing the book: ", Csp.idToName(book))
+    start_node = 0
+    shelfNode = get_nodes(get_shelf(book))
+    print("Your book is on the shelf number:", get_shelf(book))
+    print("That's identified by the node:", shelfNode)
     # setup and print graph
     graph, edges, weights = setup_graph()
-    g = Graph(edges)
-    plot(g, vertex_label=vertex_values)
 
     # print solutions on graph
-    colors = ["red", "blue", "green", "brown", "purple"]
-    # populate shelves list with relative graph nodes
-    shelves = [get_nodes(get_shelf(book))]
-    start_node = 0
+    print_solution(graph, find_solution(graph, start_node, shelfNode), weights, "purple")
 
-    for shelf, color in zip(shelves, colors):
-        # print breath first search path to the relative book
-        input("Press [enter] to print path to '{}'".format(Csp.idToName(book)))
-        print_solution(graph, find_solution(graph, start_node, book), weights, color)
+    print("Check 'grafico.png' for visualizing the path")

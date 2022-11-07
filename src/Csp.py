@@ -11,10 +11,14 @@ def checkDay(day):
     :param day: week day, specified by the user
     :return: a boolean value: False if day isn't a work day, True otherwise
     """
-    if 0 < int(day) < 7:
-        return True
-    else:
-        return False
+    try:
+        if 0 < int(day) < 7:
+            return True
+        else:
+            return False
+    except Exception:
+        print("Invalid input type")
+        exit(0)
 
 
 def checkTime(time, date):
@@ -25,19 +29,23 @@ def checkTime(time, date):
     :return: a string that match with the input
 
     """
+    try:
+        hour = time.split('.')  # splitting the input string in 2 substring
+        mins = int(hour[1])
+        # print(mins)
+        hour = int(hour[0])
+        # print(hour)
+        day = int(date)
+        # print(day)
 
-    hour = time.split('.')  # splitting the input string in 2 substring
-    mins = int(hour[1])
-    # print(mins)
-    hour = int(hour[0])
-    # print(hour)
-    day = int(date)
-    # print(day)
+    except Exception:
+        print("Invalid input type")
+        exit(0)
 
     if (not (0 < hour < 24)) or (not (0 <= mins < 60)):
         print("Invalid time.")
         exit(0)
-    elif (not (9 <= hour <= 19)) or (hour == 19 and mins > 0):
+    elif (not (9 <= hour <= 12 or 16 <= hour <= 19)) or (hour == 19 and mins > 0):
         print("We're sorry, but the library is currently closed.")
         exit(0)
     else:
@@ -197,10 +205,13 @@ def borrowABook(list1, list2):
     for book in list3:
         print("\n\t", idToName(book))
 
-    name = input("Write the name of the book chosen \n")
-    idbook = int(nameToId(name))
-
-    return idbook
+    try:
+        name = input("Write the name of the book chosen \n")
+        idbook = int(nameToId(name))
+        return idbook
+    except ValueError:
+        print("Please, insert the name of an available book!")
+        return
 
 
 def difference(list1, list2):
@@ -226,10 +237,15 @@ def returnABook(list2):
     print("Here's the list of unavailable book")
     for book in list2:
         print("\n\t", idToName(book))
-    name = input("Which book are you returning?")
-    bookreturned = int(nameToId(name))
 
-    return bookreturned
+    try:
+        name = input("Which book are you returning?")
+        bookreturned = int(nameToId(name))
+
+        return bookreturned
+    except ValueError:
+        print("Please, insert the name of an available book!")
+        return
 
 
 def checkConstraint(day, time, book, list, op):
@@ -343,7 +359,8 @@ def doCSP():
                 actualBook.remove(bookChoice)
                 bisect.insort(bookBorrowed, bookChoice)
                 print("Operation Done ... Thank you for borrowing a book\n")
-                searchChoice = int(input("Do you want to search the book? write 1 to search it or 2 to only borrow it\n"))
+                searchChoice = int(input("Do you want to see the path for reaching the book?\n "
+                                         "write 1 to search it inside the library or 2 to only borrow it\n"))
                 if searchChoice == 1:
                     GraphSearch.research(bookChoice)
             else:

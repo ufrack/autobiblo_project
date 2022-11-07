@@ -13,12 +13,12 @@ if __name__ == "__main__":
         print("_____________________________________________________________________________________________________\n")
 
         print("Choose operation: ")
-        print("1) Book a Book")
+        print("1) Borrow or Return a Book")
         print("2) Book Recommender")
         print("3) Ontology Visualizer")
         print("4) Exit\n")
 
-        catch = 2;
+        catch = 2
         while catch == 2:
             try:
                 choice = int(input("Insert choice number: "))
