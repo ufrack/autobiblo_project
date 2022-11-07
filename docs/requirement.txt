@@ -1,0 +1,9 @@
+python-constraint
+igraph
+pandas
+fuzzywuzzy
+gensim
+scipy
+sklearn
+owlready2
+pycairo
